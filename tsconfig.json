@@ -21,6 +21,10 @@
       ]
     },
     "allowImportingTsExtensions": true,
+    "forceConsistentCasingInFileNames": false,
     "noEmit": true
-  }
+  },
+  "include": [
+    "src/**/*"
+  ]
 }
