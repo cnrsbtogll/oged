@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Menu, X, Mail, MapPin, Globe, Users, Share2 } from 'lucide-react';
+import logoPng from '@/assets/logo.png';
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,8 +21,9 @@ function NavBar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-surface shadow-sm transition-all duration-300">
       <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-[1280px] mx-auto h-[88px]">
-        <Link to="/" onClick={closeMenu} className="text-2xl font-display font-bold text-primary flex items-center gap-2">
-          ÖGED
+        <Link to="/" onClick={closeMenu} className="flex items-center gap-3 group">
+          <img src={logoPng} alt="ÖGED Logo" className="h-12 w-auto object-contain rounded-md transition-transform group-hover:scale-105" />
+          <span className="text-2xl font-display font-bold text-primary tracking-wide">ÖGED</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -32,11 +34,10 @@ function NavBar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-semibold px-3 py-2 rounded-md transition-colors duration-200 ${
-                  isActive
-                    ? 'text-secondary border-b-2 border-secondary pb-1'
-                    : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'
-                }`}
+                className={`text-sm font-semibold px-3 py-2 rounded-md transition-colors duration-200 ${isActive
+                  ? 'text-secondary border-b-2 border-secondary pb-1'
+                  : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'
+                  }`}
               >
                 {link.name}
               </Link>
@@ -65,9 +66,8 @@ function NavBar() {
               key={link.path}
               to={link.path}
               onClick={closeMenu}
-              className={`text-sm font-semibold py-2 px-4 rounded-md ${
-                location.pathname === link.path ? 'bg-surface-container-low text-secondary' : 'text-on-surface'
-              }`}
+              className={`text-sm font-semibold py-2 px-4 rounded-md ${location.pathname === link.path ? 'bg-surface-container-low text-secondary' : 'text-on-surface'
+                }`}
             >
               {link.name}
             </Link>
@@ -91,8 +91,9 @@ function Footer() {
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="inline-block mb-6">
-              <span className="text-2xl font-display font-bold text-tertiary-fixed">ÖGED</span>
+            <Link to="/" className="inline-flex items-center gap-3 mb-6 group">
+              <img src={logoPng} alt="ÖGED Logo" className="h-14 w-auto object-contain bg-white p-1 rounded-lg shadow-sm transition-transform group-hover:scale-105" />
+              <span className="text-2xl font-display font-bold text-tertiary-fixed tracking-wide">ÖGED</span>
             </Link>
             <p className="text-base opacity-80 max-w-md mb-6 leading-relaxed">
               Özel Güvenlik Eğitim ve Dayanışma Derneği. Güvenli bir gelecek için eğitim, dayanışma ve kaliteyi standartlaştırıyoruz.

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Shield, GraduationCap, Handshake, Briefcase } from 'lucide-react';
+import logoPng from '@/assets/logo.png';
 
 export default function Home() {
   return (
@@ -9,21 +10,25 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/90 z-0"></div>
         {/* Subtle pattern background for hero */}
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
-        
+
         <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col items-center text-center">
+          <div className="mb-6 bg-white/10 backdrop-blur-md p-3 rounded-2xl border border-white/20 shadow-2xl transition-transform hover:scale-105">
+            <img src={logoPng} alt="ÖGED Logosu" className="w-28 h-28 md:w-36 md:h-36 object-contain rounded-xl bg-white p-2 shadow-inner" />
+          </div>
+
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container/20 text-inverse-primary border border-secondary-container/30 mb-8 text-sm font-semibold">
             <Shield size={16} />
             Güvenli Gelecek İçin Birlikteyiz
           </span>
-          
+
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-on-primary max-w-4xl mb-6 font-bold leading-tight">
             Özel Güvenlik Sektöründe <span className="text-tertiary-fixed">Eğitim</span>, <span className="text-tertiary-fixed">Dayanışma</span> ve Güçlü Gelecek
           </h1>
-          
+
           <p className="text-lg md:text-xl text-on-primary/80 max-w-2xl mb-10 leading-relaxed">
             Özel güvenlik sektörünün gelişimine katkı sağlamak, eğitim ve istihdamı desteklemek ve sektör çalışanları arasında dayanışmayı güçlendirmek için çalışıyoruz.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Link to="/about" className="bg-tertiary-fixed text-on-tertiary-fixed text-sm font-semibold px-8 py-4 rounded-full hover:bg-tertiary-fixed-dim hover:-translate-y-1 transition-all duration-300 shadow-[0_4px_20px_rgba(255,225,109,0.3)] text-center">
               ÖGED'i Tanıyın
@@ -72,10 +77,10 @@ export default function Home() {
             </div>
             <div className="flex-1 relative w-full">
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl border border-outline-variant/20">
-                <img 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9rjeD56jxxJldYpuG3VpWBbduxR17nAFpMzmcij6u_Yq0nzQ0j9HkXDmbcpoJAe4hPasjTgIyhLVbS4DLd0NIVaZp5koYdm6F0pGrFLoDv5S0aAiFR7MfleWalNvmEAX7CNONIPJ88TPRbhb1qIhd4EW1YyWufemNi3LsTHpFlk8RkluG6COty5UP3t7sa3HmYeJul3OgPCR6WpTs8aZcLHG1TJs0V8dTZl33WtGjDwcONiAgBBZQ4vVOlbhQB5V9" 
-                  alt="ÖGED Yönetim Kurulu" 
-                  className="w-full h-full object-cover" 
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9rjeD56jxxJldYpuG3VpWBbduxR17nAFpMzmcij6u_Yq0nzQ0j9HkXDmbcpoJAe4hPasjTgIyhLVbS4DLd0NIVaZp5koYdm6F0pGrFLoDv5S0aAiFR7MfleWalNvmEAX7CNONIPJ88TPRbhb1qIhd4EW1YyWufemNi3LsTHpFlk8RkluG6COty5UP3t7sa3HmYeJul3OgPCR6WpTs8aZcLHG1TJs0V8dTZl33WtGjDwcONiAgBBZQ4vVOlbhQB5V9"
+                  alt="ÖGED Yönetim Kurulu"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
