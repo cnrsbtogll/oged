@@ -10,18 +10,21 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-primary pt-20 pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/90 z-0"></div>
-        {/* Subtle pattern background for hero */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
+      <section className="relative bg-primary pt-20 pb-32">
+        {/* Background container with overflow-hidden */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/90 z-0"></div>
+          {/* Subtle pattern background for hero */}
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
+        </div>
 
         <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col items-center text-center">
           <div className="mb-6 bg-white/10 backdrop-blur-md p-3 rounded-2xl border border-white/20 shadow-2xl transition-transform hover:scale-105">
             <img src={logoPng} alt="ÖGED Logosu" className="w-28 h-28 md:w-36 md:h-36 object-contain rounded-xl bg-white p-2 shadow-inner" />
           </div>
 
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container/20 text-inverse-primary border border-secondary-container/30 mb-8 text-sm font-semibold">
-            <Shield size={16} />
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-tertiary-fixed/20 text-tertiary-fixed border border-tertiary-fixed/40 mb-8 text-sm font-bold shadow-md backdrop-blur-sm">
+            <Shield size={18} className="text-tertiary-fixed" />
             Güvenli Gelecek İçin Birlikteyiz
           </span>
 
@@ -44,23 +47,23 @@ export default function Home() {
         </div>
 
         {/* Decorative Stats Overlay */}
-        <div className="absolute bottom-0 left-0 w-full translate-y-1/2 px-margin-mobile md:px-margin-desktop z-20">
-          <div className="max-w-[1000px] mx-auto bg-surface rounded-xl ambient-shadow border border-outline-variant/30 p-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="font-display text-2xl md:text-3xl font-bold text-primary mb-1">20+</div>
-              <div className="text-xs font-medium text-on-surface-variant">Yıllık Tecrübe</div>
+        <div className="absolute bottom-0 left-0 w-full translate-y-1/2 px-margin-mobile md:px-margin-desktop z-30">
+          <div className="max-w-[1000px] mx-auto bg-surface rounded-2xl shadow-2xl border border-outline-variant/40 p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="p-2">
+              <div className="font-display text-3xl md:text-4xl font-extrabold text-primary mb-1">20+</div>
+              <div className="text-xs md:text-sm font-semibold text-on-surface-variant">Yıllık Tecrübe</div>
             </div>
-            <div className="text-center">
-              <div className="font-display text-2xl md:text-3xl font-bold text-primary mb-1">5000+</div>
-              <div className="text-xs font-medium text-on-surface-variant">Eğitim Alan Üye</div>
+            <div className="p-2 border-l border-outline-variant/20">
+              <div className="font-display text-3xl md:text-4xl font-extrabold text-primary mb-1">5000+</div>
+              <div className="text-xs md:text-sm font-semibold text-on-surface-variant">Eğitim Alan Üye</div>
             </div>
-            <div className="text-center">
-              <div className="font-display text-2xl md:text-3xl font-bold text-primary mb-1">%50</div>
-              <div className="text-xs font-medium text-on-surface-variant">Kadın İstihdam Hedefi</div>
+            <div className="p-2 md:border-l border-outline-variant/20">
+              <div className="font-display text-3xl md:text-4xl font-extrabold text-primary mb-1">%50</div>
+              <div className="text-xs md:text-sm font-semibold text-on-surface-variant">Kadın İstihdam Hedefi</div>
             </div>
-            <div className="text-center">
-              <div className="font-display text-2xl md:text-3xl font-bold text-primary mb-1">81</div>
-              <div className="text-xs font-medium text-on-surface-variant">İlde Faaliyet</div>
+            <div className="p-2 border-l border-outline-variant/20">
+              <div className="font-display text-3xl md:text-4xl font-extrabold text-primary mb-1">81</div>
+              <div className="text-xs md:text-sm font-semibold text-on-surface-variant">İlde Faaliyet</div>
             </div>
           </div>
         </div>

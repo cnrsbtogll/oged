@@ -23,8 +23,8 @@ function NavBar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-surface shadow-sm transition-all duration-300">
       <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-[1280px] mx-auto h-[88px]">
         <Link to="/" onClick={closeMenu} className="flex items-center gap-3 group">
-          <img src={logoPng} alt="ÖGED Logo" className="h-12 w-auto object-contain rounded-md transition-transform group-hover:scale-105" />
-          <span className="text-2xl font-display font-bold text-primary tracking-wide">ÖGED</span>
+          <img src={logoPng} alt="ÖGED Logo" className="h-16 w-auto max-h-[64px] object-contain rounded-lg transition-transform group-hover:scale-105 drop-shadow-sm" />
+          <span className="text-3xl font-display font-extrabold text-primary tracking-wide">ÖGED</span>
         </Link>
 
         {/* Desktop Nav */}

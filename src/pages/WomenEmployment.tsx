@@ -18,13 +18,12 @@ export default function WomenEmployment() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="flex flex-col gap-6">
             <h2 className="font-display text-3xl font-bold text-primary">Neden Önemli?</h2>
-            <p className="text-base text-on-surface-variant leading-relaxed">Özel güvenlik sektörü geleneksel olarak erkek egemen bir yapıya sahip olsa da, modern güvenlik anlayışı iletişim, empati, kriz yönetimi ve detay odaklılık gibi kadınların güçlü olduğu becerilere büyük ihtiyaç duymaktadır.</p>
-            <p className="text-base text-on-surface-variant leading-relaxed">ÖGED olarak kadın istihdamını sadece bir sosyal sorumluluk değil, sektörün gelişiminde kritik bir stratejik adım olarak görüyoruz.</p>
-            
+            <p className="text-base text-on-surface-variant leading-relaxed">Özel güvenlik sektörünün gelişiminde kadın istihdamını kritik bir stratejik adım olarak görüyoruz.</p>
+
             <div className="space-y-4 mt-4">
               {[
                 "İletişim ve uzlaşma odaklı kriz çözümü",
-                "Özel alanlarda (kadın arama, sağlık kurumları) zaruri ihtiyaç",
+                "Özel alanda zaruri ihtiyaç",
                 "Ekip dinamiklerinde denge ve farklı bakış açıları",
                 "Toplumsal cinsiyet eşitliğine doğrudan katkı"
               ].map((item, idx) => (
@@ -58,9 +57,9 @@ export default function WomenEmployment() {
          <div className="bg-primary-container rounded-2xl p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8 shadow-lg border border-primary/20">
             <div className="max-w-2xl">
               <h2 className="font-display text-2xl md:text-3xl font-bold text-on-primary-container mb-4">Projeye Katılmak İster misiniz?</h2>
-              <p className="text-on-primary-container/80 text-lg">Özel güvenlik alanında kariyer yapmak isteyen veya kurumlarında kadın istihdamını artırmak isteyen kurumları projemize davet ediyoruz.</p>
+              <p className="text-on-primary-container/80 text-lg">Özel güvenlik alanında kariyer yapmak isteyen kadınlarımızı projemize davet ediyoruz.</p>
             </div>
-            <button className="whitespace-nowrap bg-primary text-on-primary text-base font-semibold px-8 py-4 rounded-xl hover:bg-primary-container hover:text-on-primary-container hover:border-primary border border-transparent transition-all shadow-md">
+            <button className="whitespace-nowrap bg-primary text-on-primary text-base font-semibold px-8 py-4 rounded-xl hover:bg-primary-container transition-all shadow-md">
               Detaylı Bilgi Alın
             </button>
          </div>

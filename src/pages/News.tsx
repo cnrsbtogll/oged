@@ -41,7 +41,6 @@ export default function News() {
             <article key={news.id} className="bg-surface-container-lowest rounded-xl overflow-hidden border border-surface-variant shadow-sm flex flex-col group cursor-pointer hover:shadow-md transition-shadow">
               <div className="aspect-video bg-surface-variant overflow-hidden relative">
                  <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
-                 {/* Assuming placeholder images if urls fail */}
                  <div className="w-full h-full bg-primary/20 flex items-center justify-center">
                     <span className="text-primary/40 font-display font-bold">ÖGED HABER</span>
                  </div>

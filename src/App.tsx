@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
-import Home from './pages/Home';
-import About from './pages/About';
-import Activities from './pages/Activities';
-import News from './pages/News';
-import WomenEmployment from './pages/WomenEmployment';
-import Membership from './pages/Membership';
-import Contact from './pages/Contact';
+import Home from './pages/Home.tsx';
+import About from './pages/About.tsx';
+import Activities from './pages/Activities.tsx';
+import News from './pages/News.tsx';
+import WomenEmployment from './pages/WomenEmployment.tsx';
+import Membership from './pages/Membership.tsx';
+import Contact from './pages/Contact.tsx';
 
 export default function App() {
   return (
