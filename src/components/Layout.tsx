@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Menu, X, Mail, MapPin, Globe, Users, Share2 } from 'lucide-react';
-import logoPng from '@/assets/logo.png';
+import logoPng from '../../assets/logo.png';
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,6 +16,7 @@ function NavBar() {
     { name: 'Faaliyetlerimiz', path: '/activities' },
     { name: 'Haberler', path: '/news' },
     { name: 'Kadın İstihdamı', path: '/women-employment' },
+    { name: 'Üyelik', path: '/membership' },
   ];
 
   return (

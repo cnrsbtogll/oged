@@ -1,8 +1,9 @@
 import { History, Eye, Flag } from 'lucide-react';
+import { FoundersSection } from '../components/FoundersSection';
 
 export default function About() {
   return (
-    <div className="flex-grow flex flex-col gap-20 pb-20">
+    <div className="flex-grow flex flex-col gap-12 pb-20">
       {/* Hero Section */}
       <section className="relative w-full min-h-[300px] md:min-h-[400px] flex items-center justify-center overflow-hidden bg-primary py-16">
         <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary-container opacity-90 z-10"></div>
@@ -13,6 +14,9 @@ export default function About() {
           <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90">Sektörde 20 yıllık tecrübe, başarılar ve gelecek vizyonu ile güvenliğin standartlarını belirliyoruz.</p>
         </div>
       </section>
+
+      {/* Founders Section */}
+      <FoundersSection isSummary={false} />
 
       {/* History & Mission/Vision Bento Grid */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto w-full">

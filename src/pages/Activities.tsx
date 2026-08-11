@@ -1,16 +1,19 @@
 import { Activity, Target, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { WorkshopsTimeline } from '../components/WorkshopsTimeline';
+import { GallerySection } from '../components/GallerySection';
 
 export default function Activities() {
   return (
-    <div className="flex-grow flex flex-col gap-20 pb-20">
-       <section className="relative w-full min-h-[300px] flex items-center justify-center overflow-hidden bg-surface py-16">
-        <div className="relative z-20 text-center px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto text-primary">
-          <span className="text-sm font-semibold text-secondary uppercase tracking-widest mb-4 block">Neler Yapıyoruz?</span>
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">Faaliyetlerimiz</h1>
-          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">Eğitim, istihdam, ve sektör dayanışması ekseninde yürüttüğümüz temel çalışmalar.</p>
+    <div className="flex-grow flex flex-col gap-12 pb-20">
+      <section className="relative w-full min-h-[250px] flex items-center justify-center overflow-hidden bg-primary text-on-primary py-16">
+        <div className="relative z-20 text-center px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto">
+          <span className="text-sm font-semibold text-tertiary-fixed uppercase tracking-widest mb-4 block">Neler Yapıyoruz?</span>
+          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">Faaliyetlerimiz & Çalıştaylarımız</h1>
+          <p className="text-lg text-on-primary/80 max-w-2xl mx-auto">Eğitim, istihdam, ve sektör dayanışması ekseninde yürüttüğümüz temel çalışmalar ve etkinlik takvimimiz.</p>
         </div>
       </section>
 
+      {/* Core Activities Grid */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
            {[
@@ -45,6 +48,12 @@ export default function Activities() {
            ))}
         </div>
       </section>
+
+      {/* Interactive Timeline */}
+      <WorkshopsTimeline />
+
+      {/* Full Photo Gallery */}
+      <GallerySection />
     </div>
   );
 }

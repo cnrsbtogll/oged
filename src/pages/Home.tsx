@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
-import { Shield, GraduationCap, Handshake, Briefcase } from 'lucide-react';
-import logoPng from '@/assets/logo.png';
+import { Shield, GraduationCap, Handshake, Briefcase, UserPlus } from 'lucide-react';
+import logoPng from '../../assets/logo.png';
+import { FoundersSection } from '../components/FoundersSection';
+import { VideoSection } from '../components/VideoSection';
+import { WorkshopsTimeline } from '../components/WorkshopsTimeline';
+import { GallerySection } from '../components/GallerySection';
 
 export default function Home() {
   return (
@@ -30,11 +34,11 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Link to="/about" className="bg-tertiary-fixed text-on-tertiary-fixed text-sm font-semibold px-8 py-4 rounded-full hover:bg-tertiary-fixed-dim hover:-translate-y-1 transition-all duration-300 shadow-[0_4px_20px_rgba(255,225,109,0.3)] text-center">
-              ÖGED'i Tanıyın
+            <Link to="/membership" className="bg-tertiary-fixed text-on-tertiary-fixed text-sm font-semibold px-8 py-4 rounded-full hover:bg-tertiary-fixed-dim hover:-translate-y-1 transition-all duration-300 shadow-[0_4px_20px_rgba(255,225,109,0.3)] text-center flex items-center justify-center gap-2">
+              <UserPlus size={18} /> ÖGED Üyesi Olun
             </Link>
-            <Link to="/activities" className="bg-transparent text-on-primary border border-on-primary/30 text-sm font-semibold px-8 py-4 rounded-full hover:bg-on-primary/10 hover:-translate-y-1 transition-all duration-300 text-center">
-              Faaliyetlerimizi İnceleyin
+            <Link to="/about" className="bg-transparent text-on-primary border border-on-primary/30 text-sm font-semibold px-8 py-4 rounded-full hover:bg-on-primary/10 hover:-translate-y-1 transition-all duration-300 text-center">
+              ÖGED'i Tanıyın
             </Link>
           </div>
         </div>
@@ -62,8 +66,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="pt-32 pb-20 px-margin-mobile md:px-margin-desktop bg-background" id="about">
+      {/* About Highlights */}
+      <section className="pt-32 pb-16 px-margin-mobile md:px-margin-desktop bg-background">
         <div className="max-w-[1280px] mx-auto">
           <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
             <div className="flex-1">
@@ -86,7 +90,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Bento Grid Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-surface rounded-xl p-8 border border-outline-variant/30 hover:-translate-y-1 transition-transform shadow-sm">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
@@ -113,6 +116,34 @@ export default function Home() {
               <p className="text-sm text-on-primary/80 relative z-10">Özellikle kadınların sektörde daha fazla yer alması için özel istihdam projeleri yürütüyoruz.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 1. Founders Section (Summary Block) */}
+      <FoundersSection isSummary={true} />
+
+      {/* 2. YouTube Video Section */}
+      <VideoSection />
+
+      {/* 3. Workshops & Meetings Timeline Preview */}
+      <WorkshopsTimeline limit={3} />
+
+      {/* 4. Photo Gallery Preview */}
+      <GallerySection limit={3} />
+
+      {/* Membership CTA */}
+      <section className="py-16 px-margin-mobile md:px-margin-desktop bg-primary text-on-primary text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Siz de ÖGED Gücüne Katılın</h2>
+          <p className="text-base text-on-primary/80 mb-8 leading-relaxed">
+            Mesleki standartlarınızı yükseltmek, sürekli eğitimlerimizden yararlanmak ve güçlü dayanışma ağımızda yerinizi almak için üyelik başvurusu yapın.
+          </p>
+          <Link
+            to="/membership"
+            className="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed text-sm font-semibold px-8 py-4 rounded-full hover:bg-tertiary-fixed-dim transition-colors shadow-lg"
+          >
+            <UserPlus size={18} /> Hemen Üye Olun
+          </Link>
         </div>
       </section>
     </>
