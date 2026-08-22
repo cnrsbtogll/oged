@@ -33,8 +33,8 @@ export default function Contact() {
                 <h4 className="font-bold text-primary mb-1">Genel Merkez Adresi</h4>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   ÖGED Özel Güvenlik Eğitim ve Dayanışma Derneği<br />
-                  Atatürk Bulvarı No: 123/4, Kızılay<br />
-                  Çankaya / Ankara, Türkiye
+                  Atatürk Mahallesi Lale Caddesi No: 1/7<br />
+                  Sincan / Ankara, Türkiye
                 </p>
               </div>
             </div>
@@ -46,8 +46,8 @@ export default function Contact() {
               <div>
                 <h4 className="font-bold text-primary mb-1">Telefon Hatlarımız</h4>
                 <div className="flex flex-col gap-1 text-sm font-semibold text-secondary">
-                  <a href="tel:+903125550000" className="hover:underline">+90 (312) 555 00 00 (Merkez)</a>
-                  <a href="tel:+905325550000" className="hover:underline">+90 (532) 555 00 00 (Danışma)</a>
+                  <a href="tel:+905309916433" className="hover:underline">0 (530) 991 64 33 (GSM / WhatsApp)</a>
+                  <a href="tel:+903126235142" className="hover:underline">0 (312) 623 51 42 (Santral)</a>
                 </div>
               </div>
             </div>
@@ -59,8 +59,8 @@ export default function Contact() {
               <div>
                 <h4 className="font-bold text-primary mb-1">E-Posta Adreslerimiz</h4>
                 <div className="flex flex-col gap-1 text-sm font-semibold text-secondary">
-                  <a href="mailto:info@oged.com.tr" className="hover:underline">info@oged.com.tr</a>
-                  <a href="mailto:uyelik@oged.com.tr" className="hover:underline">uyelik@oged.com.tr</a>
+                  <a href="mailto:ogedguvenlikdernegi@gmail.com" className="hover:underline">ogedguvenlikdernegi@gmail.com</a>
+                  <a href="mailto:ozelguvenlikegitimdernegi@gmail.com" className="hover:underline">ozelguvenlikegitimdernegi@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-primary mb-1">Çalışma Saatleri</h4>
-                <p className="text-sm text-on-surface-variant">Pazartesi - Cuma: 09:00 - 18:00<br />Hafta sonu kapalıdır.</p>
+                <p className="text-sm text-on-surface-variant">Pazartesi - Cumartesi: 09:00 - 18:00<br />Pazar günleri kapalıdır.</p>
               </div>
             </div>
 
@@ -80,12 +80,11 @@ export default function Contact() {
               <h4 className="font-display font-bold text-lg mb-3 flex items-center gap-2">
                 <Globe size={20} /> Sosyal Medya Hesaplarımız
               </h4>
-              <p className="text-xs text-on-primary/80 mb-4">Dernek duyurularımız ve faaliyetlerimizi sosyal mecralardan da takip edebilirsiniz.</p>
+              <p className="text-xs text-on-primary/80 mb-4">Dernek duyurularımız ve faaliyetlerimizi sosyal mecralardan takip edebilirsiniz.</p>
               <div className="flex flex-wrap gap-3">
-                <a href="https://youtube.com" target="_blank" rel="noreferrer" className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-xs font-semibold transition-colors">YouTube</a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-xs font-semibold transition-colors">LinkedIn</a>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-xs font-semibold transition-colors">Instagram</a>
-                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-xs font-semibold transition-colors">Facebook</a>
+                <a href="https://www.instagram.com/ogeddernegi?igsi=eG5remV0YXBsbGxq&utm_source=qr" target="_blank" rel="noreferrer" className="px-4 py-2.5 bg-white/10 hover:bg-white/20 rounded-xl text-xs font-semibold transition-colors">Instagram</a>
+                <a href="https://www.facebook.com/share/14q7n3SAoFA/?mibextid=wwXIfr" target="_blank" rel="noreferrer" className="px-4 py-2.5 bg-white/10 hover:bg-white/20 rounded-xl text-xs font-semibold transition-colors">Facebook</a>
+                <a href="https://www.youtube.com/@OGEDDernegi" target="_blank" rel="noreferrer" className="px-4 py-2.5 bg-white/10 hover:bg-white/20 rounded-xl text-xs font-semibold transition-colors">YouTube</a>
               </div>
             </div>
           </div>

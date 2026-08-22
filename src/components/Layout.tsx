@@ -117,26 +117,33 @@ function Footer() {
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4 text-tertiary-fixed font-display">İletişim</h4>
-            <ul className="flex flex-col gap-3 text-base opacity-80">
+            <ul className="flex flex-col gap-2.5 text-xs opacity-90">
               <li className="flex items-start gap-2">
-                <Mail size={20} className="mt-1 flex-shrink-0" />
-                info@oged.com.tr
+                <Mail size={16} className="mt-0.5 flex-shrink-0 text-tertiary-fixed" />
+                <div className="flex flex-col gap-0.5">
+                  <a href="mailto:ogedguvenlikdernegi@gmail.com" className="hover:underline">ogedguvenlikdernegi@gmail.com</a>
+                  <a href="mailto:ozelguvenlikegitimdernegi@gmail.com" className="hover:underline">ozelguvenlikegitimdernegi@gmail.com</a>
+                </div>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin size={20} className="mt-1 flex-shrink-0" />
-                Ankara, Türkiye
+                <MapPin size={16} className="mt-0.5 flex-shrink-0 text-tertiary-fixed" />
+                <span>Atatürk Mh. Lale Cd. No:1/7 Sincan / Ankara</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="font-semibold text-tertiary-fixed text-xs">GSM:</span>
+                <a href="tel:+905309916433" className="hover:underline">0 (530) 991 64 33</a>
               </li>
             </ul>
           </div>
         </div>
         <div className="pt-6 border-t border-white/20 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs font-medium opacity-70">
-            © 2024 ÖGED Özel Güvenlik Eğitim ve Dayanışma Derneği. Tüm hakları saklıdır.
+            © 2026 ÖGED Özel Güvenlik Eğitim ve Dayanışma Derneği. Tüm hakları saklıdır.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="opacity-70 hover:opacity-100 hover:text-tertiary-fixed transition-colors"><Globe size={20} /></a>
-            <a href="#" className="opacity-70 hover:opacity-100 hover:text-tertiary-fixed transition-colors"><Users size={20} /></a>
-            <a href="#" className="opacity-70 hover:opacity-100 hover:text-tertiary-fixed transition-colors"><Share2 size={20} /></a>
+            <a href="https://www.instagram.com/ogeddernegi?igsi=eG5remV0YXBsbGxq&utm_source=qr" target="_blank" rel="noreferrer" className="opacity-70 hover:opacity-100 hover:text-tertiary-fixed transition-colors text-xs font-semibold">Instagram</a>
+            <a href="https://www.facebook.com/share/14q7n3SAoFA/?mibextid=wwXIfr" target="_blank" rel="noreferrer" className="opacity-70 hover:opacity-100 hover:text-tertiary-fixed transition-colors text-xs font-semibold">Facebook</a>
+            <a href="https://www.youtube.com/@OGEDDernegi" target="_blank" rel="noreferrer" className="opacity-70 hover:opacity-100 hover:text-tertiary-fixed transition-colors text-xs font-semibold">YouTube</a>
           </div>
         </div>
       </div>
