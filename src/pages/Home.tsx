@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Shield, GraduationCap, Handshake, Briefcase, UserPlus } from 'lucide-react';
 import logoPng from '../../assets/logo.png';
+import logoVideo from '../../assets/logo video.mp4';
 import { BOARD_IMAGE } from '../data/ogedData';
 import { FoundersSection } from '../components/FoundersSection';
 import { WorkshopsTimeline } from '../components/WorkshopsTimeline';
@@ -20,7 +21,14 @@ export default function Home() {
 
         <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col items-center text-center">
           <div className="mb-8 bg-white/10 backdrop-blur-md p-5 sm:p-6 rounded-[2.5rem] border border-white/20 shadow-2xl transition-transform hover:scale-105">
-            <img src={logoPng} alt="ÖGED Logosu" className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain rounded-3xl bg-white p-4 md:p-6 shadow-inner" />
+            <video
+              src={logoVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-3xl bg-black shadow-inner"
+            />
           </div>
 
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-tertiary-fixed/20 text-tertiary-fixed border border-tertiary-fixed/40 mb-8 text-sm font-bold shadow-md backdrop-blur-sm">
