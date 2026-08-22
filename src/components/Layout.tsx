@@ -21,10 +21,15 @@ function NavBar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-surface shadow-sm transition-all duration-300">
-      <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-[1280px] mx-auto h-[88px]">
-        <Link to="/" onClick={closeMenu} className="flex items-center gap-3 group">
-          <img src={logoPng} alt="ÖGED Logo" className="h-16 w-auto max-h-[64px] object-contain rounded-lg transition-transform group-hover:scale-105 drop-shadow-sm" />
-          <span className="text-3xl font-display font-extrabold text-primary tracking-wide">ÖGED</span>
+      <div className="flex justify-between items-center px-4 sm:px-6 md:px-10 w-full mx-auto h-[116px]">
+        <Link to="/" onClick={closeMenu} className="flex items-center gap-3 group flex-shrink-0">
+          <img src={logoPng} alt="ÖGED Logo" className="h-20 md:h-24 lg:h-28 w-auto max-h-[84px] md:max-h-[96px] lg:max-h-[108px] object-contain rounded-xl transition-transform group-hover:scale-105 drop-shadow-md" />
+          <div className="flex flex-col justify-center">
+            <span className="text-2xl md:text-3xl lg:text-4xl font-display font-extrabold text-primary tracking-wide leading-none">ÖGED</span>
+            <span className="text-[10px] md:text-xs lg:text-sm font-semibold text-on-surface-variant/90 tracking-normal leading-tight mt-1 max-w-[170px] sm:max-w-none">
+              Özel Güvenlik Eğitim ve Dayanışma Derneği
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
@@ -61,7 +66,7 @@ function NavBar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-[88px] left-0 w-full bg-surface border-t border-surface-variant shadow-lg flex flex-col p-margin-mobile gap-4">
+        <div className="md:hidden absolute top-[116px] left-0 w-full bg-surface border-t border-surface-variant shadow-lg flex flex-col p-margin-mobile gap-4">
           {links.map((link) => (
             <Link
               key={link.path}
@@ -88,13 +93,13 @@ function NavBar() {
 
 function Footer() {
   return (
-    <footer className="bg-primary text-on-primary pt-16 pb-8 px-margin-mobile md:px-margin-desktop mt-auto">
-      <div className="max-w-[1280px] mx-auto">
+    <footer className="bg-primary text-on-primary pt-16 pb-8 px-4 sm:px-6 md:px-10 mt-auto">
+      <div className="w-full mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="inline-flex items-center gap-3 mb-6 group">
-              <img src={logoPng} alt="ÖGED Logo" className="h-14 w-auto object-contain bg-white p-1 rounded-lg shadow-sm transition-transform group-hover:scale-105" />
-              <span className="text-2xl font-display font-bold text-tertiary-fixed tracking-wide">ÖGED</span>
+              <img src={logoPng} alt="ÖGED Logo" className="h-20 md:h-24 w-auto object-contain bg-white p-2 rounded-xl shadow-md transition-transform group-hover:scale-105" />
+              <span className="text-3xl font-display font-bold text-tertiary-fixed tracking-wide">ÖGED</span>
             </Link>
             <p className="text-base opacity-80 max-w-md mb-6 leading-relaxed">
               Özel Güvenlik Eğitim ve Dayanışma Derneği. Güvenli bir gelecek için eğitim, dayanışma ve kaliteyi standartlaştırıyoruz.

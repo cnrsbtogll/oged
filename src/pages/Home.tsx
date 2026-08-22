@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { Shield, GraduationCap, Handshake, Briefcase, UserPlus } from 'lucide-react';
 import logoPng from '../../assets/logo.png';
 import { FoundersSection } from '../components/FoundersSection';
-import { VideoSection } from '../components/VideoSection';
 import { WorkshopsTimeline } from '../components/WorkshopsTimeline';
 import { GallerySection } from '../components/GallerySection';
 
@@ -19,8 +18,8 @@ export default function Home() {
         </div>
 
         <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col items-center text-center">
-          <div className="mb-6 bg-white/10 backdrop-blur-md p-3 rounded-2xl border border-white/20 shadow-2xl transition-transform hover:scale-105">
-            <img src={logoPng} alt="ÖGED Logosu" className="w-28 h-28 md:w-36 md:h-36 object-contain rounded-xl bg-white p-2 shadow-inner" />
+          <div className="mb-8 bg-white/10 backdrop-blur-md p-5 sm:p-6 rounded-[2.5rem] border border-white/20 shadow-2xl transition-transform hover:scale-105">
+            <img src={logoPng} alt="ÖGED Logosu" className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain rounded-3xl bg-white p-4 md:p-6 shadow-inner" />
           </div>
 
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-tertiary-fixed/20 text-tertiary-fixed border border-tertiary-fixed/40 mb-8 text-sm font-bold shadow-md backdrop-blur-sm">
@@ -32,9 +31,22 @@ export default function Home() {
             Özel Güvenlik Sektöründe <span className="text-tertiary-fixed">Eğitim</span>, <span className="text-tertiary-fixed">Dayanışma</span> ve Güçlü Gelecek
           </h1>
 
-          <p className="text-lg md:text-xl text-on-primary/80 max-w-2xl mb-10 leading-relaxed">
+          <p className="text-lg md:text-xl text-on-primary/80 max-w-2xl mb-8 leading-relaxed">
             Özel güvenlik sektörünün gelişimine katkı sağlamak, eğitim ve istihdamı desteklemek ve sektör çalışanları arasında dayanışmayı güçlendirmek için çalışıyoruz.
           </p>
+
+          {/* Tanıtım Videosu (YouTube) */}
+          <div className="w-full max-w-3xl mb-10 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-black/80 backdrop-blur-md p-1.5 sm:p-2">
+            <div className="aspect-video w-full rounded-xl md:rounded-2xl overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/Jx1OkUtNww0?rel=0"
+                title="ÖGED Dernek Üyeleri Tanıtım Videosu"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Link to="/membership" className="bg-tertiary-fixed text-on-tertiary-fixed text-sm font-semibold px-8 py-4 rounded-full hover:bg-tertiary-fixed-dim hover:-translate-y-1 transition-all duration-300 shadow-[0_4px_20px_rgba(255,225,109,0.3)] text-center flex items-center justify-center gap-2">
@@ -125,10 +137,7 @@ export default function Home() {
       {/* 1. Founders Section (Summary Block) */}
       <FoundersSection isSummary={true} />
 
-      {/* 2. YouTube Video Section */}
-      <VideoSection />
-
-      {/* 3. Workshops & Meetings Timeline Preview */}
+      {/* 2. Workshops & Meetings Timeline Preview */}
       <WorkshopsTimeline limit={3} />
 
       {/* 4. Photo Gallery Preview */}
