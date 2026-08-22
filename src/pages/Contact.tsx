@@ -59,6 +59,7 @@ export default function Contact() {
               <div>
                 <h4 className="font-bold text-primary mb-1">E-Posta Adreslerimiz</h4>
                 <div className="flex flex-col gap-1 text-sm font-semibold text-secondary">
+                  <a href="mailto:ogeddernegi@gmail.com" className="hover:underline">ogeddernegi@gmail.com</a>
                   <a href="mailto:ogedguvenlikdernegi@gmail.com" className="hover:underline">ogedguvenlikdernegi@gmail.com</a>
                   <a href="mailto:ozelguvenlikegitimdernegi@gmail.com" className="hover:underline">ozelguvenlikegitimdernegi@gmail.com</a>
                 </div>

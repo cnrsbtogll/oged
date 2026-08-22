@@ -121,6 +121,7 @@ function Footer() {
               <li className="flex items-start gap-2">
                 <Mail size={16} className="mt-0.5 flex-shrink-0 text-tertiary-fixed" />
                 <div className="flex flex-col gap-0.5">
+                  <a href="mailto:ogeddernegi@gmail.com" className="hover:underline">ogeddernegi@gmail.com</a>
                   <a href="mailto:ogedguvenlikdernegi@gmail.com" className="hover:underline">ogedguvenlikdernegi@gmail.com</a>
                   <a href="mailto:ozelguvenlikegitimdernegi@gmail.com" className="hover:underline">ozelguvenlikegitimdernegi@gmail.com</a>
                 </div>

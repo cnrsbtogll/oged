@@ -1,4 +1,5 @@
 import logoPng from '../../assets/logo.png';
+import dilekOranImg from '../../assets/founders/dilek_oran.jpeg';
 import mehtapKamalakImg from '../../assets/founders/mehtap_kamalak.jpeg';
 import founder3Img from '../../assets/founders/kadir_gozalan.jpeg';
 import founder4Img from '../../assets/founders/yahya_demirtekin.jpeg';
@@ -42,6 +43,14 @@ export const FOUNDER_GROUP_IMAGE = groupImg;
 export const BOARD_IMAGE = yonetimKuruluImg;
 
 export const FOUNDERS_DATA: Founder[] = [
+  {
+    id: '0',
+    name: 'Dilek ORAN',
+    title: 'Dernek Başkanı',
+    role: 'ÖGED Yönetim Kurulu Başkanı',
+    image: dilekOranImg,
+    bio: 'TOBB Özel Güvenlik Sektör Meclisi Eğitim ve Kalite Kontrol Çalışma Grubu Temsilcisi | SDK Özel Güvenlik YK Başkanı',
+  },
   {
     id: '1',
     name: 'Avukat Mehtap KAMALAK',
