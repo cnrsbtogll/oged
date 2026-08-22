@@ -15,7 +15,8 @@ function NavBar() {
     { name: 'Hakkımızda', path: '/about' },
     { name: 'Faaliyetlerimiz', path: '/activities' },
     { name: 'Haberler', path: '/news' },
-    { name: 'Kadın İstihdamı', path: '/women-employment' },
+    { name: 'Projeler', path: '/projects' },
+    { name: 'Basın Açıklaması', path: '/press-release' },
     { name: 'Üyelik', path: '/membership' },
   ];
 
