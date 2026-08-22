@@ -36,8 +36,8 @@ export default function Home() {
             Güvenli Gelecek İçin Birlikteyiz
           </span>
 
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-on-primary max-w-4xl mb-6 font-bold leading-tight">
-            Özel Güvenlik Sektöründe <span className="text-tertiary-fixed">Eğitim</span>, <span className="text-tertiary-fixed">Dayanışma</span> ve Güçlü Gelecek
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-on-primary max-w-5xl mb-6 font-bold leading-tight">
+            Eğitimle Güçlenen <span className="text-tertiary-fixed">Özel Güvenlik</span>, Dayanışmayla Güçlenen <span className="text-tertiary-fixed">Sektör</span>.
           </h1>
 
           <p className="text-lg md:text-xl text-on-primary/80 max-w-2xl mb-8 leading-relaxed">
