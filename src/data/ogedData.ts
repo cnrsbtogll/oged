@@ -1,4 +1,11 @@
 import logoPng from '../../assets/logo.png';
+import mehtapKamalakImg from '../../assets/founders/mehtap_kamalak.jpeg';
+import founder3Img from '../../assets/founders/kadir_gozalan.jpeg';
+import founder4Img from '../../assets/founders/yahya_demirtekin.jpeg';
+import founder5Img from '../../assets/founders/omer-celalettin-yilmaz.jpeg';
+import founder6Img from '../../assets/founders/mehmet_gunal_boyraz.jpeg'; 
+import groupImg from '../../assets/founders/group.jpeg';
+import yonetimKuruluImg from '../../assets/founders/yonetim-kurulu.jpeg';
 
 export interface Founder {
   id: string;
@@ -31,14 +38,49 @@ export interface GalleryItem {
   category: string;
 }
 
+export const FOUNDER_GROUP_IMAGE = groupImg;
+export const BOARD_IMAGE = yonetimKuruluImg;
+
 export const FOUNDERS_DATA: Founder[] = [
   {
     id: '1',
-    name: 'ÖGED Kurucu Yönetim Kurulu',
-    title: 'Özel Güvenlik Eğitim ve Dayanışma Derneği',
-    role: 'Kurucu Heyet',
-    image: logoPng,
-    bio: 'Özel güvenlik sektöründe standartları yükseltmek, nitelikli eğitimi yaygınlaştırmak ve sektör çalışanları arasında güçlü dayanışma köprüleri kurmak amacıyla kurulmuştur.',
+    name: 'Avukat Mehtap KAMALAK',
+    title: 'Kurucu Üye',
+    role: 'Hukuk Danışmanı / Avukat',
+    image: mehtapKamalakImg,
+    bio: 'Özel güvenlik mevzuatı, çalışan hakları ve hukuki danışmanlık alanlarında derneğimize öncülük etmektedir.',
+  },
+  {
+    id: '2',
+    name: 'Kadir GÖZALAN',
+    title: 'Kurucu Üye',
+    role: 'Emekli Başpolis',
+    image: founder3Img,
+    bio: 'Emniyet teşkilatındaki zengin saha tecrübesi ile özel güvenlik eğitim standartlarının geliştirilmesine katkı sağlamaktadır.',
+  },
+  {
+    id: '3',
+    name: 'Mehmet Günal BOYRAZ',
+    title: 'Kurucu Üye',
+    role: 'Emekli Polis Memuru',
+    image: founder6Img,
+    bio: 'Güvenlik operasyonları ve saha uygulamaları hususunda mesleki bilgi birikimini dernek üyelerine aktarmaktadır.',
+  },
+  {
+    id: '4',
+    name: 'Yahya DEMİRTEKİN',
+    title: 'Kurucu Üye',
+    role: 'Psikolog',
+    image: founder4Img,
+    bio: 'Özel güvenlik personelinin psikolojik dayanıklılığı, stres yönetimi ve etkili iletişim eğitimlerini koordine etmektedir.',
+  },
+  {
+    id: '5',
+    name: 'Ömer Celalettin YILMAZ',
+    title: 'Kurucu Üye',
+    role: 'Eğitim Kurumu Sahibi',
+    image: founder5Img,
+    bio: 'Özel güvenlik eğitim kurumları işletmeciliği ve sektörel eğitim programlarının niteliğinin artırılmasında öncü rol üstlenmektedir.',
   },
 ];
 

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Shield, GraduationCap, Handshake, Briefcase, UserPlus } from 'lucide-react';
 import logoPng from '../../assets/logo.png';
+import { BOARD_IMAGE } from '../data/ogedData';
 import { FoundersSection } from '../components/FoundersSection';
 import { WorkshopsTimeline } from '../components/WorkshopsTimeline';
 import { GallerySection } from '../components/GallerySection';
@@ -97,7 +98,7 @@ export default function Home() {
             <div className="flex-1 relative w-full">
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl border border-outline-variant/20">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9rjeD56jxxJldYpuG3VpWBbduxR17nAFpMzmcij6u_Yq0nzQ0j9HkXDmbcpoJAe4hPasjTgIyhLVbS4DLd0NIVaZp5koYdm6F0pGrFLoDv5S0aAiFR7MfleWalNvmEAX7CNONIPJ88TPRbhb1qIhd4EW1YyWufemNi3LsTHpFlk8RkluG6COty5UP3t7sa3HmYeJul3OgPCR6WpTs8aZcLHG1TJs0V8dTZl33WtGjDwcONiAgBBZQ4vVOlbhQB5V9"
+                  src={BOARD_IMAGE}
                   alt="ÖGED Yönetim Kurulu"
                   className="w-full h-full object-cover"
                 />

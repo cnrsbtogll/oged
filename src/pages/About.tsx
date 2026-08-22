@@ -1,5 +1,6 @@
 import { History, Eye, Flag } from 'lucide-react';
 import { FoundersSection } from '../components/FoundersSection';
+import { BOARD_IMAGE } from '../data/ogedData';
 
 export default function About() {
   return (
@@ -69,7 +70,7 @@ export default function About() {
         <div className="flex flex-col xl:flex-row gap-12 items-start">
           <div className="w-full xl:w-2/3 rounded-xl overflow-hidden ambient-shadow border border-surface-variant relative group">
             <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6qeWPnG3h7VtrL133HdrHklC78nBMLT3jZbS87bF1llT3i9Dtm80vFHVDbaZCEsI0cUVuPDnNSiVE2pDpga644XL40XD3_0dC2Os4OD7WB8J9gFRNOKnV4OTSFaNSMARipUBDOAaoyYSXSgzLcPneMYFslRTSpbf0pbIHrHkHpnAXbDkeTVLLCqa3OPknjyGC32tVE1NuJqBTX9L0iK0mTihdeAYdHXb7ykAgPGc2kmnqGN8OmPA" 
+              src={BOARD_IMAGE} 
               alt="ÖGED Yönetim Kurulu Üyeleri" 
               className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
             />
