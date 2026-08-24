@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, GraduationCap, Handshake, Briefcase, UserPlus } from 'lucide-react';
+import { Shield, GraduationCap, Handshake, Briefcase, UserPlus, Volume2, VolumeX } from 'lucide-react';
 import logoPng from '../../assets/logo.png';
 import logoVideo from '../../assets/logo video.mp4';
 import { BOARD_IMAGE } from '../data/ogedData';
@@ -10,26 +10,39 @@ import { GallerySection } from '../components/GallerySection';
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
       video.currentTime = 0;
-      video.play().catch(() => {
-        const handleInteraction = () => {
-          if (videoRef.current) {
-            videoRef.current.play().catch(() => {});
-          }
-          window.removeEventListener('click', handleInteraction);
-          window.removeEventListener('keydown', handleInteraction);
-          window.removeEventListener('touchstart', handleInteraction);
-        };
-        window.addEventListener('click', handleInteraction);
-        window.addEventListener('keydown', handleInteraction);
-        window.addEventListener('touchstart', handleInteraction);
+      video.muted = false;
+      // 1. Önce sesli oynatmayı dene
+      video.play().then(() => {
+        setIsMuted(false);
+      }).catch(() => {
+        // 2. Tarayıcı politikası sesli otoyürütmeyi engellerse, görüntünün donmaması için sessiz başlat
+        video.muted = true;
+        setIsMuted(true);
+        video.play().catch(() => {});
       });
     }
   }, []);
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (video) {
+      if (isMuted) {
+        video.muted = false;
+        video.currentTime = 0;
+        video.play().catch(() => {});
+        setIsMuted(false);
+      } else {
+        video.muted = true;
+        setIsMuted(true);
+      }
+    }
+  };
 
   return (
     <>
@@ -43,7 +56,11 @@ export default function Home() {
         </div>
 
         <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col items-center text-center">
-          <div className="mb-8 bg-white/10 backdrop-blur-md p-5 sm:p-6 rounded-[2.5rem] border border-white/20 shadow-2xl transition-transform hover:scale-105">
+          <div
+            onClick={toggleMute}
+            className="mb-8 relative bg-white/10 backdrop-blur-md p-5 sm:p-6 rounded-[2.5rem] border border-white/20 shadow-2xl transition-transform hover:scale-105 cursor-pointer group"
+            title={isMuted ? "Sesi açmak için tıklayın" : "Sesi kapatmak için tıklayın"}
+          >
             <video
               ref={videoRef}
               src={logoVideo}
@@ -51,6 +68,26 @@ export default function Home() {
               playsInline
               className="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-cover rounded-3xl bg-black shadow-inner"
             />
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleMute();
+              }}
+              className="absolute bottom-8 right-8 bg-black/60 hover:bg-black/80 text-white p-2.5 rounded-full backdrop-blur-md border border-white/20 shadow-lg transition-all flex items-center gap-1.5 text-xs font-semibold px-3"
+            >
+              {isMuted ? (
+                <>
+                  <VolumeX size={16} className="text-tertiary-fixed" />
+                  <span>Sesi Aç</span>
+                </>
+              ) : (
+                <>
+                  <Volume2 size={16} className="text-tertiary-fixed" />
+                  <span>Sesi Kapat</span>
+                </>
+              )}
+            </button>
           </div>
 
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-tertiary-fixed/20 text-tertiary-fixed border border-tertiary-fixed/40 mb-8 text-sm font-bold shadow-md backdrop-blur-sm">
