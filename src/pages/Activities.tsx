@@ -1,4 +1,4 @@
-import { Activity, Target, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { Activity, Target, ShieldCheck, HeartHandshake, Tv, Play, Clock } from 'lucide-react';
 import { WorkshopsTimeline } from '../components/WorkshopsTimeline';
 import { GallerySection } from '../components/GallerySection';
 
@@ -46,6 +46,55 @@ export default function Activities() {
                 <p className="text-base text-on-surface-variant leading-relaxed">{item.desc}</p>
              </div>
            ))}
+        </div>
+      </section>
+
+      {/* Faaliyetler Video Yayını (30-57. Dakika Arası) */}
+      <section className="px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto w-full">
+        <div className="bg-surface-container-lowest rounded-3xl p-6 md:p-10 border border-surface-variant shadow-sm">
+          <div className="text-center max-w-3xl mx-auto mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 text-secondary mb-4 text-xs md:text-sm font-semibold">
+              <Tv size={16} />
+              <span className="flex items-center gap-1.5">
+                Faaliyet Yayını
+                <span className="bg-secondary/20 px-2.5 py-0.5 rounded-md text-[11px] font-bold flex items-center gap-1">
+                  <Clock size={12} /> 30:00 - 57:00
+                </span>
+              </span>
+            </div>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-primary mb-3">
+              ÖGED Faaliyetler & Etkinlik Özel Yayını
+            </h2>
+            <p className="text-sm md:text-base text-on-surface-variant leading-relaxed">
+              Dernek faaliyetlerimiz ve sektör çalışmalarımız hakkında detaylı sunum ve görüşmelerin yer aldığı yayın kesiti (30. - 57. dakikalar arası).
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden shadow-xl border border-outline-variant/30 bg-black relative">
+            <div className="aspect-video w-full">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/0lI2HGi4LLI?start=1800&end=3420&rel=0"
+                title="ÖGED Faaliyetler Özel Yayını (30-57. dk)"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div className="mt-6 max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-surface-container/50 border border-surface-variant">
+            <span className="text-xs md:text-sm text-on-surface-variant text-center sm:text-left">
+              * Video varsayılan olarak 30. dakikadan başlar ve 57. dakikada tamamlanır.
+            </span>
+            <a
+              href="https://www.youtube.com/watch?v=0lI2HGi4LLI&t=1800s"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-secondary text-on-secondary px-4 py-2 rounded-xl text-xs md:text-sm font-semibold hover:bg-secondary/90 transition-colors flex-shrink-0"
+            >
+              <Play size={14} /> YouTube'da İzle (30:00'dan İtibaren)
+            </a>
+          </div>
         </div>
       </section>
 

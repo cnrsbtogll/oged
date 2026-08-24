@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, GraduationCap, Handshake, Briefcase, UserPlus } from 'lucide-react';
 import logoPng from '../../assets/logo.png';
@@ -8,6 +9,28 @@ import { WorkshopsTimeline } from '../components/WorkshopsTimeline';
 import { GallerySection } from '../components/GallerySection';
 
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.currentTime = 0;
+      video.play().catch(() => {
+        const handleInteraction = () => {
+          if (videoRef.current) {
+            videoRef.current.play().catch(() => {});
+          }
+          window.removeEventListener('click', handleInteraction);
+          window.removeEventListener('keydown', handleInteraction);
+          window.removeEventListener('touchstart', handleInteraction);
+        };
+        window.addEventListener('click', handleInteraction);
+        window.addEventListener('keydown', handleInteraction);
+        window.addEventListener('touchstart', handleInteraction);
+      });
+    }
+  }, []);
+
   return (
     <>
       {/* Hero Section */}
@@ -22,12 +45,11 @@ export default function Home() {
         <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col items-center text-center">
           <div className="mb-8 bg-white/10 backdrop-blur-md p-5 sm:p-6 rounded-[2.5rem] border border-white/20 shadow-2xl transition-transform hover:scale-105">
             <video
+              ref={videoRef}
               src={logoVideo}
               autoPlay
-              loop
-              muted
               playsInline
-              className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-3xl bg-black shadow-inner"
+              className="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-cover rounded-3xl bg-black shadow-inner"
             />
           </div>
 
