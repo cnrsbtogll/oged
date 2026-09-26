@@ -23,7 +23,7 @@ export interface WorkshopEvent {
   year: string;
   title: string;
   location: string;
-  category: 'Çalıştay' | 'Toplantı' | 'Seminer' | 'Sertifika';
+  category: 'Çalıştay' | 'Toplantı' | 'Seminer' | 'Sertifika' | 'Eğitim' | 'Kurs';
   description: string;
   image?: string;
   participantsCount?: number;
