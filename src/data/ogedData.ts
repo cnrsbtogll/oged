@@ -95,6 +95,15 @@ export const FOUNDERS_DATA: Founder[] = [
 
 export const TIMELINE_EVENTS: WorkshopEvent[] = [
   {
+    id: 'e25',
+    date: '29 Eylül - 01 Ekim 2026',
+    year: '2026',
+    title: 'Özel Güvenlik Eğitimleri Çalıştayı',
+    location: 'Ankara',
+    category: 'Çalıştay',
+    description: 'EGM Özel Güvenlik Denetleme Başkanlığı koordinesinde düzenlenen çalıştaya, ÖGED Genel Başkanımız Sayın Dilek ORAN konuşmacı olarak katılım sağlayacaktır.',
+  },
+  {
     id: 'e24',
     date: '13-16 Nisan 2026',
     year: '2026',

@@ -8,6 +8,14 @@ export default function News() {
 
   const newsItems = [
     {
+      id: 0,
+      title: "Genel Başkanımız Dilek Oran Özel Güvenlik Eğitimleri Çalıştayı’nda Konuşmacı Olarak Yer Alacak",
+      date: "29 Eylül - 01 Ekim 2026",
+      excerpt: "Emniyet Genel Müdürlüğü Özel Güvenlik Denetleme Başkanlığı koordinesinde Ankara'da gerçekleştirilecek Özel Güvenlik Eğitimleri Çalıştayı'na, ÖGED Genel Başkanımız Sayın Dilek ORAN konuşmacı olarak katılım sağlayacaktır.",
+      categoryBadge: "Öne Çıkan Etkinlik",
+      hasPdf: false,
+    },
+    {
       id: 1,
       title: "Okul Güvenliğinde “Bahçe Görevlisi” Tartışması: ÖGED’den Yetki ve Sorumluluk Uyarısı",
       date: "14 Ağustos 2024",
@@ -115,11 +123,15 @@ export default function News() {
                         <Calendar size={15} />
                         <time>{news.date}</time>
                       </div>
-                      {news.hasPdf && (
+                      {news.categoryBadge ? (
+                        <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-md bg-primary/10 text-primary">
+                          {news.categoryBadge}
+                        </span>
+                      ) : news.hasPdf ? (
                         <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-md bg-secondary/15 text-secondary">
                           <FileText size={12} /> Resmi PDF Eki
                         </span>
-                      )}
+                      ) : null}
                     </div>
                     <h3 className="font-display text-xl font-bold text-primary mb-3 line-clamp-2 group-hover:text-secondary transition-colors">
                       {news.title}
