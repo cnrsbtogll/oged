@@ -1,19 +1,21 @@
-import { FolderKanban, Users, ShieldCheck, ArrowRight, FileText, Download } from 'lucide-react';
+import { FolderKanban, Users, ShieldCheck, ArrowRight, FileText, Download, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ozgeRollupPdf from '../../assets/documents/ÖZGEKampüs Roll-up.pdf';
 
 export default function Projects() {
   const projectsList = [
     {
       id: 'ozge-projesi',
-      title: 'ÖZGE Projesi',
-      category: 'Eğitim & Standardizasyon',
-      description: 'Özel Güvenlik Gelişim ve Eğitim (ÖZGE) Projesi; sektördeki eğitim standartlarının yükseltilmesi, mesleki yetkinliklerin belgelendirilmesi ve kalitenin kurumsallaşması amacıyla yürütülmektedir.',
+      title: 'ÖZGE Projesi (ÖZGE Kampüs)',
+      category: 'Eğitim & Dijital Kampüs',
+      description: 'Özel güvenlik eğitiminde bilginin senaryoyla, senaryonun uygulamayla, uygulamanın mesleki yetkinlikle buluştuğu adres: ÖZGE Kampüs. Modüler eğitim altyapısı ve branşlaşma vizyon projemiz.',
       stats: 'Öncü Vizyon Projesi',
       icon: ShieldCheck,
       badge: '1. Öncelikli Proje',
       hasPdf: true,
-      pdfUrl: '#', // Kullanıcıdan gelecek PDF buraya bağlanacak
-      linkText: 'Proje Detay PDF (Eklenecek)'
+      pdfUrl: ozgeRollupPdf,
+      pdfLabel: 'ÖZGE Kampüs Tanıtım PDF',
+      websiteUrl: 'https://www.ozgekampus.com'
     },
     {
       id: 'kadin-istihdami',
@@ -82,9 +84,26 @@ export default function Projects() {
                   </span>
 
                   {project.hasPdf ? (
-                    <div className="inline-flex items-center gap-2 text-sm font-bold text-secondary bg-secondary/10 px-4 py-2 rounded-xl">
-                      <FileText size={16} />
-                      <span>PDF Detayı (Bekleniyor)</span>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <a
+                        href={project.pdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-bold text-on-secondary bg-secondary px-4 py-2.5 rounded-xl hover:bg-secondary/90 transition-all shadow-xs"
+                      >
+                        <Download size={16} />
+                        <span>{project.pdfLabel}</span>
+                      </a>
+                      {project.websiteUrl && (
+                        <a
+                          href={project.websiteUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-secondary transition-colors"
+                        >
+                          ozgekampus.com <ExternalLink size={14} />
+                        </a>
+                      )}
                     </div>
                   ) : (
                     <Link
