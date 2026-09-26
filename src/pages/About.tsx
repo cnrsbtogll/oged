@@ -1,15 +1,15 @@
 import React from 'react';
-import { 
-  Eye, 
-  Flag, 
-  Target, 
-  Award, 
-  Users, 
-  FileCheck, 
-  BrainCircuit, 
-  TrendingUp, 
-  Lightbulb, 
-  CheckCircle2, 
+import {
+  Eye,
+  Flag,
+  Target,
+  Award,
+  Users,
+  FileCheck,
+  BrainCircuit,
+  TrendingUp,
+  Lightbulb,
+  CheckCircle2,
   Sparkles,
   BookOpen
 } from 'lucide-react';
@@ -75,7 +75,7 @@ export default function About() {
             Özel Güvenlik Eğitim ve Dayanışma Derneği (ÖGED)
           </h1>
           <div className="inline-block bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 text-tertiary-fixed font-bold text-base md:text-xl shadow-lg">
-            “Eğitimde Gelişim, Meslekte Dayanışma.”
+            “Özel Güvenlik Eğitiminde Gelişim, Meslekte Dayanışma.”
           </div>
         </div>
       </section>
@@ -92,13 +92,13 @@ export default function About() {
           </div>
           <div className="relative z-10">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary mb-4 text-xs font-bold uppercase tracking-wider">
-              <Sparkles size={16} /> ÖGED’in Yaklaşımı
+              <Sparkles size={16} /> Derneğin Kuruluş Amacı
             </span>
             <h2 className="font-display text-2xl md:text-4xl font-bold text-primary mb-4">
-              Özel Güvenlik Eğitiminde Rehberlik ve Ortak Akıl
+              Özel Güvenlik Eğitiminde Ortak Kalite, Güçlü Dayanışma
             </h2>
             <p className="text-base md:text-lg text-on-surface-variant leading-relaxed font-medium max-w-4xl">
-              ÖGED; Özel Güvenlik Denetleme Başkanlığımızın önderliği ve rehberliğinde, özel güvenlik eğitimlerinin geliştirilmesine katkı sağlamak, eğitim kurumları ve eğiticiler arasındaki dayanışmayı güçlendirmek ve eğitimde ortak akıl kültürünü yaygınlaştırmak amacıyla çalışmalarını sürdürür.
+              ÖGED, özel güvenlik eğitimlerinin gelişmesine katkı sunmak ve eğitim kurumları arasında iş birliğini güçlendirmek amacıyla 15 Haziran 2022’de kurulmuştur. Sektörün ihtiyaçlarını birlikte değerlendiriyor, eğitimde ortak standartlar için çalışıyoruz.
             </p>
           </div>
         </div>
@@ -220,10 +220,10 @@ export default function About() {
         {/* Board Photo & Roster */}
         <div className="flex flex-col xl:flex-row gap-12 items-center">
           <div className="w-full xl:w-2/3 rounded-2xl overflow-hidden shadow-xl border border-outline-variant/30 relative group">
-            <img 
-              src={BOARD_IMAGE} 
-              alt="ÖGED Yönetim Kurulu Üyeleri" 
-              className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
+            <img
+              src={BOARD_IMAGE}
+              alt="ÖGED Yönetim Kurulu Üyeleri"
+              className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-6 pt-16">
               <p className="text-white text-sm font-semibold">ÖGED Yönetim Kurulu Toplantısı</p>
@@ -231,9 +231,9 @@ export default function About() {
           </div>
           <div className="w-full xl:w-1/3 flex flex-col gap-4">
             <div className="bg-surface p-6 rounded-2xl border border-outline-variant/30 shadow-sm">
-              <span className="text-xs font-bold text-secondary uppercase block mb-1">Yönetim Kurulu Başkanı</span>
+              <span className="text-xs font-bold text-secondary uppercase block mb-1">Genel Başkanımız</span>
               <h3 className="font-display text-xl font-bold text-primary">Dilek ORAN</h3>
-              <p className="text-xs text-on-surface-variant mt-1">ÖGED Yönetim Kurulu Başkanı & TOBB Sektör Meclisi Temsilcisi</p>
+              <p className="text-xs text-on-surface-variant mt-1">ÖGED Yönetim Kurulu Başkanı & TOBB Özel Güvenlik Sektör Meclis Üyesi- Özel Güvenlik Eğitim ve Kalite Temsilcisi</p>
             </div>
 
             <div className="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/20 text-xs text-on-surface-variant leading-relaxed">

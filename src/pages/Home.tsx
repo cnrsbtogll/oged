@@ -108,8 +108,8 @@ export default function Home() {
             <div className="aspect-video w-full rounded-xl md:rounded-2xl overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/Jx1OkUtNww0?rel=0"
-                title="ÖGED Dernek Üyeleri Tanıtım Videosu"
+                src="https://www.youtube.com/embed/vx84I3Oh3jg?rel=0"
+                title="ÖGED Tanıtım Videosu"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
