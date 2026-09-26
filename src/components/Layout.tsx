@@ -102,7 +102,10 @@ function Footer() {
               <span className="text-3xl font-display font-bold text-tertiary-fixed tracking-wide">ÖGED</span>
             </Link>
             <p className="text-base opacity-80 max-w-md mb-6 leading-relaxed">
-              Özel Güvenlik Eğitim ve Dayanışma Derneği. Özel Güvenlik eğitimlerinde güvenli bir gelecek için eğitim, dayanışma ve kaliteyi standartlaştırıyoruz.
+              Özel Güvenlik Eğitim ve Dayanışma Derneği
+            </p>
+            <p className="text-base opacity-80 max-w-md mb-6 leading-relaxed">
+              Özel Güvenlik eğitimlerinde güvenli bir gelecek için eğitim, dayanışma ve kaliteyi standartlaştırıyoruz.
             </p>
           </div>
           <div>

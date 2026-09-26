@@ -181,26 +181,26 @@ export default function About() {
       {/* Objectives Section */}
       <section className="px-4 sm:px-6 md:px-10 max-w-[1280px] mx-auto w-full">
         <div className="bg-surface-container-lowest p-8 md:p-12 rounded-3xl border border-outline-variant/30 shadow-md">
-          <div className="flex items-center gap-3 mb-8 border-b border-outline-variant/20 pb-4">
-            <div className="p-3 bg-secondary/10 rounded-2xl text-secondary">
-              <Target size={28} />
+          <div className="flex items-center gap-4 mb-8 border-b border-outline-variant/20 pb-5">
+            <div className="p-3.5 bg-secondary/10 rounded-2xl text-secondary">
+              <Target size={32} />
             </div>
             <div>
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-primary">
+              <h2 className="font-display text-2xl md:text-4xl font-bold text-primary">
                 Amaçlarımız
               </h2>
-              <p className="text-xs md:text-sm text-on-surface-variant">Sektörel eğitimde kalite ve standardizasyonu hedefleyen 10 temel amacımız.</p>
+              <p className="text-sm md:text-base text-on-surface-variant mt-1">Sektörel eğitimde kalite ve standardizasyonu hedefleyen 10 temel amacımız.</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {objectives.map((obj, idx) => (
               <div
                 key={idx}
-                className="flex items-start gap-3.5 p-4 rounded-xl bg-background border border-outline-variant/20 hover:border-primary/40 transition-colors"
+                className="flex items-start gap-4 p-5 rounded-2xl bg-background border border-outline-variant/30 hover:border-primary/50 hover:shadow-sm transition-all"
               >
-                <CheckCircle2 size={20} className="text-secondary mt-0.5 flex-shrink-0" />
-                <p className="text-xs md:text-sm text-primary font-medium leading-relaxed">
+                <CheckCircle2 size={24} className="text-secondary mt-0.5 flex-shrink-0" />
+                <p className="text-sm md:text-base text-primary font-semibold leading-relaxed">
                   {obj}
                 </p>
               </div>
@@ -218,26 +218,44 @@ export default function About() {
         </div>
 
         {/* Board Photo & Roster */}
-        <div className="flex flex-col xl:flex-row gap-12 items-center">
-          <div className="w-full xl:w-2/3 rounded-2xl overflow-hidden shadow-xl border border-outline-variant/30 relative group">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+          <div className="w-full lg:w-7/12 rounded-3xl overflow-hidden shadow-xl border border-outline-variant/30 relative group flex items-center bg-black/5">
             <img
               src={BOARD_IMAGE}
               alt="ÖGED Yönetim Kurulu Üyeleri"
-              className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-auto max-h-[580px] object-cover transform transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-6 pt-16">
-              <p className="text-white text-sm font-semibold">ÖGED Yönetim Kurulu Toplantısı</p>
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/95 via-primary/60 to-transparent p-6 sm:p-8 pt-20">
+              <span className="text-tertiary-fixed font-bold text-xs uppercase tracking-wider block mb-1">ÖGED Liderliği</span>
+              <p className="text-white text-base md:text-lg font-bold">ÖGED Yönetim Kurulu Toplantısı</p>
             </div>
           </div>
-          <div className="w-full xl:w-1/3 flex flex-col gap-4">
-            <div className="bg-surface p-6 rounded-2xl border border-outline-variant/30 shadow-sm">
-              <span className="text-xs font-bold text-secondary uppercase block mb-1">Genel Başkanımız</span>
-              <h3 className="font-display text-xl font-bold text-primary">Dilek ORAN</h3>
-              <p className="text-xs text-on-surface-variant mt-1">ÖGED Yönetim Kurulu Başkanı & TOBB Özel Güvenlik Sektör Meclis Üyesi- Özel Güvenlik Eğitim ve Kalite Temsilcisi</p>
+
+          <div className="w-full lg:w-5/12 flex flex-col justify-between gap-5">
+            {/* Başkan Kartı */}
+            <div className="bg-surface p-7 sm:p-8 rounded-3xl border border-outline-variant/40 shadow-sm">
+              <span className="text-xs sm:text-sm font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary uppercase tracking-wider inline-block mb-3">
+                Genel Başkanımız
+              </span>
+              <h3 className="font-display text-2xl sm:text-3xl font-bold text-primary mb-2">
+                Dilek ORAN
+              </h3>
+              <p className="text-sm sm:text-base font-semibold text-secondary leading-snug">
+                ÖGED Yönetim Kurulu Başkanı & TOBB Özel Güvenlik Sektör Meclis Üyesi - Özel Güvenlik Eğitim ve Kalite Temsilcisi
+              </p>
             </div>
 
-            <div className="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/20 text-xs text-on-surface-variant leading-relaxed">
-              ÖGED Yönetim Kurulu, derneğimizin tüzüğü ve mevzuat doğrultusunda Özel Güvenlik Denetleme Başkanlığımızın rehberliğinde sektörün eğitim standartlarını yükseltmek için özveriyle çalışmaktadır.
+            {/* Yönetim Kurulu Misyon ve Çalışma Açıklaması */}
+            <div className="bg-surface-container-lowest p-6 sm:p-8 rounded-3xl border border-outline-variant/30 text-sm sm:text-base text-on-surface-variant leading-relaxed shadow-sm flex flex-col gap-4">
+              <h4 className="font-display text-lg font-bold text-primary">
+                Yönetim ve Çalışma İlkelerimiz
+              </h4>
+              <p>
+                ÖGED Yönetim Kurulu; derneğimizin tüzüğü, 5188 sayılı Kanun ve ilgili mevzuat doğrultusunda, Özel Güvenlik Denetleme Başkanlığımızın rehberliğinde sektörün eğitim standartlarını yükseltmek için özveriyle çalışmaktadır.
+              </p>
+              <p className="text-xs sm:text-sm text-on-surface-variant/80 border-t border-outline-variant/20 pt-3">
+                Eğitim kurumları, eğiticiler ve sektör paydaşları arasında güçlü bir iş birliği ve kalite güvencesi inşa etmeyi sürdürüyoruz.
+              </p>
             </div>
           </div>
         </div>

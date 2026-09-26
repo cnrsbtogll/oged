@@ -29,10 +29,10 @@ export default function Activities() {
       id: 'Jx1OkUtNww0',
       title: 'ÖGED Dernek Üyeleri ve Dayanışma Buluşması',
       date: 'Haziran 2023',
-      badge: 'Kuruluş & Dayanışma',
-      embedUrl: 'https://www.youtube.com/embed/Jx1OkUtNww0?rel=0',
-      watchUrl: 'https://www.youtube.com/watch?v=Jx1OkUtNww0',
-      desc: 'Dernek üyelerimizin ve kurucu kadromuzun sektörel değerlendirmeleri ve röportajları.'
+      badge: '04:39 Başlangıç | Buluşma',
+      embedUrl: 'https://www.youtube.com/embed/Jx1OkUtNww0?start=279&rel=0',
+      watchUrl: 'https://www.youtube.com/watch?v=Jx1OkUtNww0&t=279s',
+      desc: 'Dernek üyelerimizin ve kurucu kadromuzun sektörel değerlendirmeleri ve röportajları (04:39 dakikadan itibaren).'
     }
   ];
 

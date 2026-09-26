@@ -17,6 +17,8 @@ export default function News() {
       title: "Kadın Güvenlik Görevlileri İçin Yeni İstihdam Protokolü İmzalandı",
       date: "02 Mayıs 2024",
       excerpt: "Sektörde kadın istihdamını desteklemek amacıyla, önde gelen kurumlarla yeni bir protokol imzaladık. Hedef: %50 kadın istihdamı.",
+      hasPdf: true,
+      pdfUrl: '#'
     },
     {
       id: 3,
@@ -94,9 +96,16 @@ export default function News() {
                     <span className="text-primary/40 font-display font-bold text-lg">ÖGED HABER</span>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    <div className="flex items-center gap-2 text-xs text-secondary font-semibold mb-3">
-                      <Calendar size={15} />
-                      <time>{news.date}</time>
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center gap-2 text-xs text-secondary font-semibold">
+                        <Calendar size={15} />
+                        <time>{news.date}</time>
+                      </div>
+                      {news.hasPdf && (
+                        <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-md bg-secondary/10 text-secondary">
+                          <FileText size={12} /> PDF Eki
+                        </span>
+                      )}
                     </div>
                     <h3 className="font-display text-xl font-bold text-primary mb-3 line-clamp-2 group-hover:text-secondary transition-colors">
                       {news.title}
@@ -104,12 +113,19 @@ export default function News() {
                     <p className="text-on-surface-variant text-sm mb-6 flex-grow line-clamp-3 leading-relaxed">
                       {news.excerpt}
                     </p>
-                    <Link
-                      to="#"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all"
-                    >
-                      Devamını Oku <ArrowRight size={16} />
-                    </Link>
+                    {news.hasPdf ? (
+                      <div className="inline-flex items-center gap-2 text-sm font-bold text-secondary bg-secondary/10 px-3.5 py-2 rounded-xl w-fit">
+                        <FileText size={15} />
+                        <span>Haber Detayı (PDF Bekleniyor)</span>
+                      </div>
+                    ) : (
+                      <Link
+                        to="#"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all"
+                      >
+                        Devamını Oku <ArrowRight size={16} />
+                      </Link>
+                    )}
                   </div>
                 </article>
               ))}
