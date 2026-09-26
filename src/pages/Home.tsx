@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, GraduationCap, Handshake, Briefcase, UserPlus, Volume2, VolumeX } from 'lucide-react';
+import { Shield, GraduationCap, Handshake, Briefcase, UserPlus, Volume2, VolumeX, Award, Download } from 'lucide-react';
 import logoPng from '../../assets/logo.png';
 import logoVideo from '../../assets/logo video.mp4';
+import panelBasariPdf from '../../assets/documents/PANEL BAŞARI BELGESİ.pdf';
 import { BOARD_IMAGE } from '../data/ogedData';
 import { FoundersSection } from '../components/FoundersSection';
 import { WorkshopsTimeline } from '../components/WorkshopsTimeline';
@@ -104,7 +105,7 @@ export default function Home() {
           </p>
 
           {/* Tanıtım Videosu (YouTube) */}
-          <div className="w-full max-w-3xl mb-10 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-black/80 backdrop-blur-md p-1.5 sm:p-2">
+          <div className="w-full max-w-3xl mb-8 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-black/80 backdrop-blur-md p-1.5 sm:p-2">
             <div className="aspect-video w-full rounded-xl md:rounded-2xl overflow-hidden">
               <iframe
                 className="w-full h-full"
@@ -114,6 +115,36 @@ export default function Home() {
                 allowFullScreen
               ></iframe>
             </div>
+          </div>
+
+          {/* Panel Başarı Belgesi */}
+          <div className="w-full max-w-3xl mb-10 bg-white/10 backdrop-blur-md border border-white/25 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+            <div className="flex items-center gap-3.5 text-left">
+              <div className="w-12 h-12 rounded-xl bg-tertiary-fixed/20 border border-tertiary-fixed/40 text-tertiary-fixed flex items-center justify-center flex-shrink-0 shadow-inner">
+                <Award size={24} />
+              </div>
+              <div>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-tertiary-fixed block">
+                  Resmi Belge / Başarı Sertifikası
+                </span>
+                <h3 className="font-display font-bold text-white text-base sm:text-lg">
+                  Panel Başarı Belgesi
+                </h3>
+                <p className="text-xs text-on-primary/80">
+                  Özel Güvenlik Denetleme Başkanlığı koordinesinde derneğimize takdim edilen başarı belgesi.
+                </p>
+              </div>
+            </div>
+
+            <a
+              href={panelBasariPdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold hover:bg-tertiary-fixed-dim hover:scale-105 transition-all shadow-md flex-shrink-0"
+            >
+              <Download size={15} />
+              <span>Belgeyi İncele (PDF)</span>
+            </a>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

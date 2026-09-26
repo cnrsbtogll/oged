@@ -321,59 +321,28 @@ export const TIMELINE_EVENTS: WorkshopEvent[] = [
   },
 ];
 
-export const GALLERY_ITEMS: GalleryItem[] = [
-  {
-    id: 'g1',
-    title: 'I. Ulusal Çalıştay Açılış Oturumu',
-    date: '15 Kasım 2024',
-    signature: 'ÖGED Yönetim Kurulu',
-    description: 'Özel Güvenlik Eğitim ve Dayanışma Derneği 1. Ulusal Çalıştay açılış konuşmaları ve plaket takdimi.',
-    imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80',
-    category: 'Çalıştay',
-  },
-  {
-    id: 'g2',
-    title: 'Kurucu Üyeler Strateji İstişare Toplantısı',
-    date: '02 Ekim 2024',
-    signature: 'Kurucular Heyeti',
-    description: 'Dernek tüzüğünün kabulü ve ilk dönem çalışma hedeflerinin belirlendiği kurucular toplantısı.',
-    imageUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80',
-    category: 'Toplantı',
-  },
-  {
-    id: 'g3',
-    title: 'Kadın İstihdamı Paneli ve İmza Töreni',
-    date: '28 Aralık 2024',
-    signature: 'Kadın Çalışma Grubu',
-    description: 'Sektörde kadın varlığını güçlendirecek iş birliği protokolünün imzalandığı panel oturumu.',
-    imageUrl: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1000&q=80',
-    category: 'İstihdam',
-  },
-  {
-    id: 'g4',
-    title: 'Sertifika Takdim Töreni',
-    date: '18 Nisan 2025',
-    signature: 'Eğitim Komisyonu',
-    description: 'Kriz yönetimi ve teknik güvenlik eğitimini başarıyla tamamlayan kursiyerlere sertifika dağıtımı.',
-    imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80',
-    category: 'Sertifika',
-  },
-  {
-    id: 'g5',
-    title: 'Bölge Temsilcileri İstişare Yemeği',
-    date: '15 Mayıs 2025',
-    signature: 'Genel Merkez Temsilcileri',
-    description: 'Türkiye genelindeki bölge temsilcilerimizin katılımıyla gerçekleştirilen yıllık değerlendirme buluşması.',
-    imageUrl: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80',
-    category: 'Buluşma',
-  },
-  {
-    id: 'g6',
-    title: 'Akademik Danışma Kurulu Semineri',
-    date: '20 Haziran 2025',
-    signature: 'Akademik Heyet',
-    description: 'Sektörün akademik boyutu ve uluslararası eğitim standartlarının tartışıldığı seminer programı.',
-    imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=80',
-    category: 'Seminer',
-  },
-];
+// Assets media import via Vite glob
+const mediaModules = import.meta.glob<{ default: string }>('../../assets/media/*.jpeg', { eager: true });
+const mediaList = Object.values(mediaModules).map((mod) => mod.default);
+
+export const GALLERY_ITEMS: GalleryItem[] = mediaList.length > 0
+  ? mediaList.map((imgUrl, idx) => ({
+      id: `media-${idx + 1}`,
+      title: `ÖGED Etkinlik Fotoğrafı #${idx + 1}`,
+      date: '2024 - 2026',
+      signature: 'ÖGED Arşivi',
+      description: '',
+      imageUrl: imgUrl,
+      category: 'Etkinlik',
+    }))
+  : [
+      {
+        id: 'g1',
+        title: 'I. Ulusal Çalıştay Açılış Oturumu',
+        date: '15 Kasım 2024',
+        signature: 'ÖGED Yönetim Kurulu',
+        description: 'Özel Güvenlik Eğitim ve Dayanışma Derneği 1. Ulusal Çalıştay açılış konuşmaları ve plaket takdimi.',
+        imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80',
+        category: 'Çalıştay',
+      },
+    ];
