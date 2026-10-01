@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Calendar, ArrowRight, ExternalLink, Megaphone, Newspaper, FileText, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import news2Pdf from '../../assets/documents/2nci haber özel güvenlik denetleme başkanlığı 2026.pdf';
+import defaultNewsImg from '../../assets/media/ÖGED Haber_ Küresel Duyuru.png';
 
 export default function News() {
   const [activeTab, setActiveTab] = useState<'news' | 'press'>('news');
@@ -107,15 +108,11 @@ export default function News() {
                   className="bg-surface-container-lowest rounded-2xl overflow-hidden border border-surface-variant shadow-sm flex flex-col group hover:shadow-md transition-shadow"
                 >
                   <div className="aspect-video bg-primary/10 relative overflow-hidden flex items-center justify-center">
-                    {news.imageUrl ? (
-                      <img
-                        src={news.imageUrl}
-                        alt={news.title}
-                        className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
-                      />
-                    ) : (
-                      <span className="text-primary/40 font-display font-bold text-lg">ÖGED HABER</span>
-                    )}
+                    <img
+                      src={news.imageUrl || defaultNewsImg}
+                      alt={news.title}
+                      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="flex items-center justify-between mb-3">
