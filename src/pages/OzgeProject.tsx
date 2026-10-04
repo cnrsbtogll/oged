@@ -30,24 +30,6 @@ const ozgeVideos: VideoItem[] = [
     description: 'Kursiyerlerin öğrenme sürecini kolaylaştıran, sınav başarı oranlarını yükselten modüler yapı.',
     embedUrl: 'https://www.youtube.com/embed/mRgdZzoy-oY?rel=0',
     watchUrl: 'https://youtu.be/mRgdZzoy-oY'
-  },
-  {
-    id: 'q5100_n-RI8',
-    number: 3,
-    title: 'Sınıf İçi Dijital Araçlar ve Örnek Olaylar',
-    badge: '3. Bölüm',
-    description: 'Sektörümüzde karşılaşılan konuları somut örnek olaylarla ele alan zengin içerikli dijital platform araçları.',
-    embedUrl: 'https://www.youtube.com/embed/q5100_n-RI8?rel=0',
-    watchUrl: 'https://youtu.be/q5100_n-RI8'
-  },
-  {
-    id: 'RdmYRKRfgzk',
-    number: 4,
-    title: 'ÖZGE Kampüs ile Eğitimin Geleceği',
-    badge: '4. Bölüm',
-    description: 'Eğitim kitaplarımızı teknolojiyle buluşturan, özel güvenlik eğitiminde dijital dönüşümün adımları.',
-    embedUrl: 'https://www.youtube.com/embed/RdmYRKRfgzk?rel=0',
-    watchUrl: 'https://youtu.be/RdmYRKRfgzk'
   }
 ];
 
@@ -150,7 +132,7 @@ export default function OzgeProject() {
         </div>
       </section>
 
-      {/* 4 Video Bölümü (2x2 Grid) */}
+      {/* Video Bölümü (Yan Yana 2 Video) */}
       <section className="px-4 sm:px-6 md:px-10 max-w-[1280px] mx-auto w-full">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
@@ -162,11 +144,11 @@ export default function OzgeProject() {
               ÖZGE Projesi Videoları
             </h2>
             <p className="text-sm sm:text-base text-on-surface-variant mt-1">
-              Platformun modüllerini ve dijital eğitim araçlarını tanıtan 4 video serisi.
+              Platformun modüllerini ve dijital eğitim altyapısını tanıtan video serisi.
             </p>
           </div>
           <span className="text-xs font-semibold px-3.5 py-2 rounded-xl bg-surface-container-low text-primary self-start md:self-auto border border-outline-variant/20">
-            Toplam 4 Video
+            Toplam 2 Video
           </span>
         </div>
 
