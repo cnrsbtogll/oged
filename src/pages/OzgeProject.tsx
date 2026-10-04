@@ -41,13 +41,13 @@ const ozgeVideos: VideoItem[] = [
     watchUrl: 'https://youtu.be/q5100_n-RI8'
   },
   {
-    id: 'Vl9OC0aK7Ms',
+    id: 'RdmYRKRfgzk',
     number: 4,
     title: 'ÖZGE Kampüs ile Eğitimin Geleceği',
     badge: '4. Bölüm',
     description: 'Eğitim kitaplarımızı teknolojiyle buluşturan, özel güvenlik eğitiminde dijital dönüşümün adımları.',
-    embedUrl: 'https://www.youtube.com/embed/Vl9OC0aK7Ms?rel=0',
-    watchUrl: 'https://youtu.be/Vl9OC0aK7Ms'
+    embedUrl: 'https://www.youtube.com/embed/RdmYRKRfgzk?rel=0',
+    watchUrl: 'https://youtu.be/RdmYRKRfgzk'
   }
 ];
 
