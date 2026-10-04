@@ -33,6 +33,15 @@ export default function Activities() {
       embedUrl: 'https://www.youtube.com/embed/Jx1OkUtNww0?start=279&rel=0',
       watchUrl: 'https://www.youtube.com/watch?v=Jx1OkUtNww0&t=279s',
       desc: 'Dernek üyelerimizin ve kurucu kadromuzun sektörel değerlendirmeleri ve röportajları (04:39 dakikadan itibaren).'
+    },
+    {
+      id: 'KIaplc1qX5Q',
+      title: 'ÖGED Tanıtım & Farkındalık Yayını',
+      date: '2024',
+      badge: 'Özel Tanıtım',
+      embedUrl: 'https://www.youtube.com/embed/KIaplc1qX5Q?rel=0',
+      watchUrl: 'https://youtube.com/shorts/KIaplc1qX5Q',
+      desc: 'Özel Güvenlik Eğiticileri Derneği (ÖGED) vizyon ve sektörel çalışmalarını içeren tanıtım videosu.'
     }
   ];
 
@@ -149,7 +158,7 @@ export default function Activities() {
             <h5 className="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-4">
               Tüm Faaliyet Videoları ({activityVideos.length})
             </h5>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {activityVideos.map((video, idx) => {
                 const isSelected = idx === selectedVideoIndex;
                 return (

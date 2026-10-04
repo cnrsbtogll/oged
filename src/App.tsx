@@ -6,6 +6,7 @@ import Activities from './pages/Activities.tsx';
 import News from './pages/News.tsx';
 import Projects from './pages/Projects.tsx';
 import WomenEmployment from './pages/WomenEmployment.tsx';
+import OzgeProject from './pages/OzgeProject.tsx';
 import Membership from './pages/Membership.tsx';
 import Contact from './pages/Contact.tsx';
 
@@ -19,6 +20,8 @@ export default function App() {
         <Route path="news" element={<News />} />
         <Route path="projects" element={<Projects />} />
         <Route path="press-release" element={<Navigate to="/news" replace />} />
+        <Route path="ozge-project" element={<OzgeProject />} />
+        <Route path="ozge-projesi" element={<Navigate to="/ozge-project" replace />} />
         <Route path="women-employment" element={<WomenEmployment />} />
         <Route path="membership" element={<Membership />} />
         <Route path="contact" element={<Contact />} />

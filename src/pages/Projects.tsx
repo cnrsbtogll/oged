@@ -15,7 +15,9 @@ export default function Projects() {
       hasPdf: true,
       pdfUrl: ozgeRollupPdf,
       pdfLabel: 'ÖZGE Kampüs Tanıtım PDF',
-      websiteUrl: 'https://www.ozgekampus.com'
+      websiteUrl: 'https://www.ozgekampus.com',
+      internalLink: '/ozge-project',
+      linkText: 'Proje Detayı & Videolar'
     },
     {
       id: 'kadin-istihdami',
@@ -83,8 +85,17 @@ export default function Projects() {
                     {project.stats}
                   </span>
 
-                  {project.hasPdf ? (
-                    <div className="flex flex-wrap items-center gap-3">
+                  <div className="flex flex-wrap items-center gap-3">
+                    {project.internalLink && (
+                      <Link
+                        to={project.internalLink}
+                        className="inline-flex items-center gap-2 text-sm font-bold text-on-primary bg-primary px-4 py-2.5 rounded-xl hover:bg-primary/90 transition-all shadow-xs"
+                      >
+                        <span>{project.linkText || 'Detayları İncele'}</span>
+                        <ArrowRight size={16} />
+                      </Link>
+                    )}
+                    {project.hasPdf && (
                       <a
                         href={project.pdfUrl}
                         target="_blank"
@@ -94,25 +105,18 @@ export default function Projects() {
                         <Download size={16} />
                         <span>{project.pdfLabel}</span>
                       </a>
-                      {project.websiteUrl && (
-                        <a
-                          href={project.websiteUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-secondary transition-colors"
-                        >
-                          ozgekampus.com <ExternalLink size={14} />
-                        </a>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      to={project.internalLink || '/contact'}
-                      className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-secondary transition-colors"
-                    >
-                      {project.linkText} <ArrowRight size={16} />
-                    </Link>
-                  )}
+                    )}
+                    {project.websiteUrl && (
+                      <a
+                        href={project.websiteUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-secondary transition-colors"
+                      >
+                        ozgekampus.com <ExternalLink size={14} />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             );
